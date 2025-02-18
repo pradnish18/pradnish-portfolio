@@ -1,0 +1,238 @@
+/* Base styles */
+body {
+    background-color: #111;
+    color: white;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive navbar */
+.navbar {
+    padding: 1rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+/* Hero section */
+.hello-badge {
+    display: inline-block;
+    background-color: #0bce94;
+    color: white;
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 20px 20px 20px 0px;
+    margin-left: clamp(20px, 5vw, 200px);
+}
+
+.my-name {
+    font-size: clamp(32px, 5vw, 60px);
+    margin-left: clamp(20px, 5vw, 200px);
+    word-wrap: break-word;
+}
+
+.ima {
+    font-size: clamp(28px, 4vw, 50px);
+    display: flex;
+    margin-left: clamp(20px, 5vw, 200px);
+    flex-wrap: wrap;
+}
+
+.iam {
+    color: red;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid;
+    animation: typing 3s steps(15) infinite alternate,
+        blink 0.7s step-end infinite;
+    margin-left: 10px;
+}
+
+/* Social icons responsiveness */
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .social-icons {
+        justify-content: flex-start;
+        margin-left: clamp(20px, 5vw, 200px);
+    }
+}
+
+/* Profile image */
+.profile-img {
+    width: min(300px, 80vw);
+    height: auto;
+    aspect-ratio: 3/4;
+    border: 4px solid #70b5ff;
+    transition: transform 0.3s;
+    margin: 2rem auto;
+}
+
+/* Sections padding */
+section {
+    padding: 4rem 1rem;
+}
+
+/* Skills section */
+.container3 {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 1rem;
+}
+
+.skill-icon {
+    width: clamp(50px, 8vw, 80px);
+    height: auto;
+    margin: 1rem auto;
+}
+
+/* Work cards */
+.work-card {
+    background-color: #222;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1rem;
+    height: 100%;
+}
+
+/* Education cards */
+.container1-edu {
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 1rem;
+}
+
+.card-edu {
+    background: #222;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+/* Contact form */
+.container-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    .container-form {
+        flex-direction: row;
+    }
+    
+    .info, .contact-form {
+        width: 48%;
+    }
+}
+
+.info, .contact-form {
+    background: #1e1e1e;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: #222;
+    width: 100%;
+    border-radius: 10px;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: none;
+}
+
+/* Professional Skills cards */
+.skills-section .card {
+    margin-bottom: 1.5rem;
+    height: 100%;
+}
+
+.skills-section .card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Responsive grid adjustments */
+@media (max-width: 768px) {
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .col-md-4 {
+        padding: 0 1rem;
+    }
+    
+    .work-section .row,
+    .skills-section .row {
+        margin: 0;
+    }
+    .card{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .work-card{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    /* .bi bi-instagram{
+        margin-left: 20px;
+    } */
+}
+
+/* Animation keyframes */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 32%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* Under line decoration */
+.under {
+    background-color: #0092ca;
+    display: block;
+    width: 120px;
+    height: 4px;
+    margin: 5px auto 0;
+    border-radius: 5px;
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .text-md-start {
+        text-align: left;
+    }
+}
+
+button {
+    background-color: #68b1ff;
+    color: #111;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.contact-form button:hover {
+    background-color: rgb(136, 97, 209);
+}
